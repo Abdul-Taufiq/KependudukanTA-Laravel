@@ -7,8 +7,6 @@ process:
 never_cache_twig: true
 ---
 
-{% assets.addJs('https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/i18n/es.js', 90) %}
-
 ## Message translations
 
 When necessary, Select2 displays certain messages to the user.  For example, a message will appear when no search results were found or more characters need to be entered in order for a search to be made. These messages have been translated into many languages by contributors to Select2, but you can also provide your own translations.
