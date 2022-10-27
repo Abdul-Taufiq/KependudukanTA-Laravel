@@ -97,9 +97,11 @@ You can also completely customize the look and feel of the results by overriding
 2. Create your very own results output. For this you need to change the `template` reference in the config (let's say **mysearch_results**). In your theme you would then create the new template under `user/themes/_your-theme_/templates/mysearch_results.html.twig` and write your customizations. This is how it looks by default:
 
     ```
-    {% extends 'partials/simplesearch_base.html.twig' %}
-
-    {% block content %}
+    {% raw %}
+    {{ extends 'partials/simplesearch_base.html.twig' }}
+    {% endraw %}
+    
+    {{ block content }}
         <div class="content-padding">
         <h1 class="search-header">Search Results</h1>
         <h3>Query: "{{ query }}" - Found {{ search_results.count }} {{ 'Item'|pluralize(search_results.count) }}</h3>
