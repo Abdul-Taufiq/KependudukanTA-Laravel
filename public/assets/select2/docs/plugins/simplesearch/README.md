@@ -74,7 +74,7 @@ This is the traditional approach and involves having a searchbox 'somewhere' on 
 After installing the SimpleSearch plugin, you can add a simple **searchbox** to your site by including the provided twig template.  Or copy it from the plugin to your theme and customize it as you please:
 
 ```
-{% include 'partials/simplesearch_searchbox.html.twig' %}
+{% raw %} {{ include 'partials/simplesearch_searchbox.html.twig' }} {% endraw %}
 ```
 
 By default the **simplesearch_searchbox** Twig template uses the `route` as defined in the configuration.  The SimpleSearch plugin uses this route and then appends a `query:` paramater to create the following final URL.
